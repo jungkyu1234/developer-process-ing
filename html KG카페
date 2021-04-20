@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h2 align="center">welcome to KG cafe</h2>
+<table align="center">
+<tr>
+<td><img src ="./picture/coffee.jpg" width=200px height=300px></td>
+</tr>
+</table>
+<marquee behavior="scroll" scrollamount="5">  //스크롤 속도에 맞추어 옆으로 이동함
+<h3>KG 카페는 행복입니다.</h3></marquee>
+<hr>
+<h2 align="center"><font color="red" size="5">빅 이벤트</font></h2>
+<h3 align="center">여러분의 소확행을 위해 아아나 뜨아는 1000원에 제공합니다.</h3>
+<h3 align="center">단, takeout에 한합니다.</h3>
+<h4 align="center">카페 주인장올림</h4>
+<h3 align="center">우리 카페 <a href="./메인1.html">메뉴</a>는 다음과 같습니다.</h3>
+</body>
+</html>
