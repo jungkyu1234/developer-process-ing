@@ -1,0 +1,18 @@
+//HTML 부분
+<input type="text">
+
+
+//css 부분
+input {
+ width: 100px;
+ outline: none;
+ border: 1px solid lightgray;
+ padding: 5px 10px;  //위아래 5px, 좌우 10px
+ transition: 0.4s;   //자연스럽게 0.4초 간 애니메이션 효과를 줌.
+}
+
+ input:focus {   //클릭시, 나타나는 효과 기능
+  width: 200px;
+  border-color: red;
+}
+
