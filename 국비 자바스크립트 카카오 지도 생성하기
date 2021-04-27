@@ -1,0 +1,47 @@
+Kakao 지도 Javscript API 는 키 발급을 받아야 사용할 수 있습니다.
+그리고 키를 발급받기 위해서는 카카오 계정이 필요합니다.
+
+키 발급에는 아래 과정이 필요합니다.
+
+1. 카카오 개발자사이트 (https://developers.kakao.com) 접속
+2. 개발자 등록 및 앱 생성
+3. 웹 플랫폼 추가: 앱 선택 – [플랫폼] – [Web 플랫폼 등록] – 사이트 도메인 등록
+4. 사이트 도메인 등록: [웹] 플랫폼을 선택하고, [사이트 도메인] 을 등록합니다. (예: http://localhost:8080)
+5. 페이지 상단의 [JavaScript 키]를 지도 API의 appkey로 사용합니다.
+6. 앱을 실행합니다.
+
+등록한 도메인(예: http://localhost:8080)에서 웹 서버를 실행시켜 위 파일을 엽니다.
+
+===============================================================================================
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!--<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=여기에 키 값"></script> -->
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=eaae7a9e63e4393fcb3a262b634ce67b"></script>
+//                                           자바스크립트 JavaScript 키 붙여넣기
+<script>
+window.onload = function(){
+var joongang1 = new daum.maps.LatLng(37.570415, 126.992119);
+                                    //위도 및 경도는 구글 맵 사이트에서 지역 검색 후 
+//해당 위도, 경도를 지도의 중앙으로 위치하기 위한것
+var mapDesign1 = { zoom: 15,
+center: joongang1,
+mapTypeId : daum.maps.MapTypeId.ROADMAP
+/* mapTypeId : daum.maps.MapTypeId.HYBRID */
+
+};
+var map = new daum.maps.Map(document.getElementById("jido1"), mapDesign1);
+}
+</script>
+
+</head>
+<body>
+<div id="jido1" style="width: 700px; height: 700px" >
+여기에 지도 나온다</div>
+
+</body>
+</html>
