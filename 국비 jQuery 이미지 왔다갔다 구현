@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+<h1>미나리 수상소감 최고~~~~~</h1>
+<img src="picture/bread.jpg" id=bread width="200">
+<img src="picture/coffee.jpg" id=coffee width="200">
+<img src="picture/juice.jpg" id=juice width="200">
+<script>
+
+
+//jQuery로 자바스크립트를 축소한 문법
+$(function() {
+$("img").css("width", 100);
+$("img").css("height", 100);
+
+setInterval(function () {
+	$("img").first().appendTo("body"); //처음 이미지로 1번, 2번, 3번이 왔다갔다 함.
+}, 1000); //3초 간격
+});
+</script>
+</body>
+</html>
