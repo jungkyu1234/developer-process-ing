@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.5.1.js"></script>  //jQuery 사용하기 위해 추가해 주어야 함.(물론, js 폴더 만들어서 jQuery 넣고 나서)
+<script>
+$(function() {
+	$('img#yokeo').attr('height',200)
+	$('img#keukeo').attr('height',500)
+})
+</script>
+
+<script>
+$(function() {
+	$("h1").click(function(aa) {
+		$("img").toggle(3000); //duration : ms사용하거나 fast, slow사용
+		//$("img").toggle("fast"); //slow	
+	})
+});
+</script>
+
+</head>
+//사진 이미지 넣을때. 쇼핑몰 같은 플젝에서 사용 가능할 것 으로 예상.
+<body>
+<img src="picture/bread.jpg" width="200" id=yokeo>
+<img src="picture/coffee.jpg" width="200" id=keukeo>
+<h1>안녕~</h1>
+<h2>나도 안녕~</h2>
+</body>
+</html>
