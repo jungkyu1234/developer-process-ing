@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!--<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=여기에 키 값"></script> -->
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=eaae7a9e63e4393fcb3a262b634ce67b"></script>
+<script>                                            //키는 카카오 developer에서 자바스크립트 키 가져올것.
+window.onload = function(){
+var joongang1 = new daum.maps.LatLng(37.570415, 126.992119);
+
+//해당 위도, 경도를 지도의 중앙으로 위치하기 위한것
+var mapDesign1 = { zoom: 15,
+center: joongang1,
+mapTypeId : daum.maps.MapTypeId.ROADMAP
+/* mapTypeId : daum.maps.MapTypeId.HYBRID */
+
+};
+var map = new daum.maps.Map(document.getElementById("jido1"), mapDesign1);
+
+//마커가 표시될 위치입니다 
+var markerPosition  = new kakao.maps.LatLng(37.570415, 126.992119); 
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+//마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+}
+	</script>
+  </head>
+ <body>
+   <div id="jido1" style="width: 700px; height: 700px" >
+ 여기에 지도 나온다</div>
+</body>
+</html>
