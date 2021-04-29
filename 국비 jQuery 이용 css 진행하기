@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="js/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+<h1>맛집메뉴</h1>
+<div id=d2>
+<ul id=ul2 class=ul2>
+	<li id=1><b>불백</b></li>
+	<li id=2>파스타</li>
+	<li id=3>피자</li>
+</ul>
+</div>
+<div id=d3>
+<ul class=ul3>
+	<li id=11>김치전</li>
+	<li id=22>파전</li>
+	<li id=33>녹두전</li>
+</ul>
+</div>
+<div id=d5>
+<ul class=u15>
+	<li id=100>회덮밥</li>
+	<li id=200>냉면</li>
+	<li id=300>왕만두</li>
+</ul>
+</div>
+
+<script>
+//일반적인 방법으로 하면 (1)
+$("div").find("#22").text("두부전");
+$("div").find("#100").html("<h3>회냉면</h3>").css('color','red');
+});						//setHTML() 
+</script>
+
+<script>
+//프로그램 작성으로 하면 (2)
+$(function() {
+	$("li").css("color","blue");
+});
+</script>
+
+<script>
+//프로그램 작성으로 하면 -each()사용
+$(function() { //인자1(증가), 인자2
+	$('li').each(function(index1,content1) { //for()문
+		$(this).css('color','blue');
+	});    //alert(index1)// 0,1,2....
+});
+</script>
+
+</body>
+</html>
