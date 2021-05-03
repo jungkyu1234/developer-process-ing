@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>로그인</h1>
+<form action="kajalogin.jsp" method="post">
+아이디 : <input type="text" name="id1" required>
+암호 : <input type="password" name="pw1" required>
+나이 : <input type="text" name="na2" required="required">
+<input type="submit" value="가자서버로">
+<input type="reset" value="취소">
+</form>
+</body>
+</html>
+
+======jsp ===============
+
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>나는 로그인 받는 서버</h1>
+<%
+request.setCharacterEncoding("euc-kr");
+response.setCharacterEncoding("euc-kr");
+%>
+
+<%
+String id1 = request.getParameter("id1");
+String pw1 = request.getParameter("pw1");
+int na2 = Integer.parseInt(request.getParameter("na2"));  //
+%>
+
+고객님의 아이디는 <%=id1%>이고 암호는 <%=pw1%> 이구만<br>
+<p>그리고 <%= 2021-na2%> 년생 이시군요</p>         //나이만 입력하면 년생이 출력됨.
+</body>
+</html>
