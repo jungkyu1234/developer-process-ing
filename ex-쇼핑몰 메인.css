@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.list_wrap {
+    width: 1000px;
+    padding:100px;
+    margin: 0 auto;
+}
+.list_wrap ul {
+    font-size: 0%;
+}
+.list_wrap .item {
+    display: inline-block;
+    width:30%;
+    margin-left: 5%;
+    margin-top: 40px;
+    box-shadow: 0px 0px 3px rgb(0,0,0,0.5);   /* x, y, 농도색, 컬러*/
+                                                /*rgb: 0,0,0,0.5(0 ~ 1 숫자 색 투명도)*/
+}
+.list_wrap .item:nth-child(-n+3) {              /*갯수만큼 숫자*/
+    margin-top: 0%;
+} 
+.list_wrap .item:nth-child(3n-2) {              /*1, 4, 7 해당*/
+    margin-left: 0%;
+}
+.list_wrap .item .image {
+    width: 100%;
+    height: 150px;
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;                     /*cover로 사진 맞춤*/
+}
+
+.list_wrap .item1 .image { background-image: url(../img/room1.png); }
+.list_wrap .item2 .image { background-image: url(../img/room3.png); }
+.list_wrap .item3 .image { background-image: url(../img/room4.png); }
+.list_wrap .item4 .image { background-image: url(../img/room5.png); }
+.list_wrap .item5 .image { background-image: url(../img/room1.png); }
+.list_wrap .item6 .image { background-image: url(../img/room3.png); }
+.list_wrap .item7 .image { background-image: url(../img/room4.png); }
+.list_wrap .item8 .image { background-image: url(../img/room5.png); }
+.list_wrap .item9 .image { background-image: url(../img/room1.png); }
+
+.list_wrap .item .content {
+    padding: 20px;
+}
+.list_wrap .item strong {                       /*strong 태그는 인라인 이라서 block*/
+    display: block;
+    margin: 0 0 10px 0;                         /*위 아래 좌 우*/
+    font-size: 16px;
+    letter-spacing: -1px;                       /*글자 사이 간격 조절*/
+}
+.list_wrap .item p {
+    font-size:13px;
+    letter-spacing: -1px;
+}
+.list_wrap .item a {
+    display: inline-block;
+    margin: 5px 10px;                           /*위 아래 좌 우*/
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #eee;
+    font-size: 13px;
+    letter-spacing: -1px;
+    transition: all 1s ease;                    /*스무스한 효과 주기(대상, 주기, 방식)*/
+}
+.list_wrap .item a:hover {
+    background: #3a5383;                      /*마우스 올렸을때 배경색 및 글씨색*/
+    color:#fff;
+}
