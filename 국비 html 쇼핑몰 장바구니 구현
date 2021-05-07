@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%
+
+	request.setCharacterEncoding("utf-8");
+	int[] i_list = new int[3];
+	if(session.getAttribute("i_list")!=null) {
+		i_list = (int[])session.getAttribute("i_list");
+	};
+	
+	session.setAttribute("n_list", i_list);
+ /* 장바구니 아이템이 위와 같이 */
+%>      
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>장바구니 선택창</title>
+</head>
+<body>
+<form action="1_jangbasket3.jsp" method="post">
+<select name="sangpum" id="">
+	<option value="bag">가방(1개 50000)</option>
+	<option value="koodoo">구두(1개 70000)</option>
+	<option value="tie">넥타이(1개 15000)</option>
+</select>
+	<input type="submit" value="전송"/>
+	</form>
+  </body>
+</html>
