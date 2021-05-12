@@ -1,0 +1,29 @@
+
+//BookController로 만듬
+
+
+package www.practice.co.kr;
+
+import java.util.*;
+
+public class BookController {
+	public List<Book> selectBooks() {
+		List<Book> books = new ArrayList<Book>(); 
+		
+		Book book0 = new Book();
+		 book0.setTitle("해리포터");
+		 book0.setWriter("롤링");
+		 book0.setImage0("https://image.aladin.co.kr/product/38/56/cover500/898392067x_3.jpg");
+		 books.add(book0);
+		
+		 Book book1 = new Book();
+		  book1.setTitle("반지의 제왕");
+		  book1.setWriter("몰라");
+		  book1.setImage0("https://image.aladin.co.kr/product/888/41/cover500/8956372195_1.jpg");
+		  books.add(book1);
+		
+
+		return books;
+		
+	}
+}
