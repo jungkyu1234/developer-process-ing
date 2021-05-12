@@ -1,0 +1,44 @@
+//book.java 파일로 생성
+//getters and setters 를 이용하여 private 변수를 외부에서 호출 가능하도록함.
+package www.practice.co.kr;
+
+public class Book {
+	private int id;
+	private String isdn;
+	private String title;
+	private String writer;
+	private String image0;
+	
+	public final int getId() {
+		return id;
+	}
+	public final void setId(int id) {
+		this.id = id;
+	}
+	public final String getIsdn() {
+		return isdn;
+	}
+	public final void setIsdn(String isdn) {
+		this.isdn = isdn;
+	}
+	public final String getTitle() {
+		return title;
+	}
+	public final void setTitle(String title) {
+		this.title = title;
+	}
+	public final String getWriter() {
+		return writer;
+	}
+	public final void setWriter(String writer) {
+		this.writer = writer;
+	}
+	public final String getImage0() {
+		return image0;
+	}
+	public final void setImage0(String image0) {
+		this.image0 = image0;
+	}
+	
+	
+}
