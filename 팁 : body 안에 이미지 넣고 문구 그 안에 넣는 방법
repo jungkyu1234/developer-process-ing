@@ -1,0 +1,34 @@
+  <div class="best">
+            <p>Korea Tourism Awards</p>
+                <span class="sub">숨어있는 ★별들을 찿아 정성스레 꿰어 보배로 만들고자 합니다!<br>
+                    새로운 별들에 여러분의 많은 관심과 참여 부탁드립니다.♥
+                </span>
+                    </div>
+                  <div class="container">                                  //컨테이너 클래스에 이미지 파일을 바디안에 생성한다.
+                      <div id="idx_top">
+                            <Br><strong>강릉에 오신 것을 환영합니다</strong> //strong 태그를 이용하여 이미지 안에 문구를 삽입할 수 있다.
+                                <p>여러분의 여행을 선물합니다★</p>
+                                    </div>
+                                        </div>   
+                                        
+                                        
+                                        
+   ==========================================================================
+   css 부분
+   
+   #idx_top {
+    width: 100%;
+    height: 300px;
+    padding: 100px 0;
+    background: url(./img/강릉메인.png) no-repeat 50% 50% /cover;
+    text-align: center;
+}
+#idx_top strong {                              //strong 태그와 p태그의 css를 이용하여 문구 사이즈와 컬러를 입힐 수 있다.
+    color:#fff;
+    font-size: 40px;
+}
+#idx_top p {
+    color:#fff;
+    margin-top:20px;
+    font-size:30px;
+}
