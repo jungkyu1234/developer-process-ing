@@ -1,0 +1,43 @@
+package db;
+
+import java.sql.*;
+
+public class JDBC_Test {
+
+	public static void main(String[] args) {
+	
+		try {
+//			오라클 드라이버 섩치
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+//			드라이버 매니저 연결
+			Connection conn = DriverManager.getConnection(
+					  "jdbc:oracle:thin:@127.0.0.1:1521:XE",
+					  "hr", "hr");
+			
+			Statement stmt = conn.createStatement();
+			
+			ResultSet rs = stmt.executeQuery("SELECT * FROM MEMBER WHERE id ='B1'");
+			
+			while(rs.next()) { //만약 resultSet 결과값이 다음에 있다면
+				
+				String id = rs.getString("id");
+				String pw = rs.getString("pw");
+				int age = rs.getInt("age");
+				String name = rs.getString("name");
+				System.out.println("-------------------------------------");
+				
+				System.out.println(id + "\t |\t" + pw + "\t |\t" + age + "\t |\t" + name);
+				System.out.println("-------------------------------------");
+			}
+			
+			System.out.println("OK");
+		} catch (ClassNotFoundException e) {
+			System.out.println("JDBC 드라이버 로드 에러");
+			e.printStackTrace();
+		} catch (SQLException e) {
+			System.err.println("DB 연결 오류 또는 쿼리오류 입니다!");
+			e.printStackTrace();
+		}
+	}
+}
