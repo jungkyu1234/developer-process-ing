@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<link rel="stylesheet" href="practice2.css" />
+</head>
+<body>
+<div class="a">
+	  가나다라마사아자차
+	  </div>
+ </body>
+</html>
+
+========css 부분================
+
+@charset "EUC-KR";
+
+.a {
+background-size: cover; /* 배경크기 따져서 이미지 브라우저 형태에 따라 자동으로 맞춰줌. auto라고 하면 안맞추고 그냥 나옴.contain은 가로세로 맞춰서 나옴, 그래서 자동으로 나오게 커버 이용 */
+background-position: center; /* 어떠한 상황에도 가운데 정렬 */
+min-height: 100%; /* 최소 100%까지만 줄일 수 있음 */
+border: 0; /* 0 이유 내가 꽉차게 만들기 위해 혹시 몰라서 0으로 맞춤. */
+padding: 0; /* 0 이유 내가 꽉차게 만들기 위해 혹시 몰라서 0으로 맞춤. */
+text-align:center;
+  }
+}
