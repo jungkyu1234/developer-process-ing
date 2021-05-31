@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+   
+</head>
+<body>
+<h1>총점계산 프로그램</h1> 
+
+ <form id="korean" method="post" action="jumsooview">
+ 		오늘날짜 <input type="date" name="date"><br>
+ 		국어 <input type="text" name="ko" id="korean1"><br>
+ 		영어 <input type="text" name="english"><Br>
+ 	<input type="submit" value="가자서버로">
+ <input type="reset" value="취소"> 
+ 		</form>		
+     </body>
+     
+	<script>
+var t = document.getElementById("korean");
+t.addEventListener('submit', function(event) {
+	if(document.getElementById('korean1').value.length === 0 ) {
+		alert('Name 필드 누락');
+		event.preventDefault();                                   //자바스크립트 alert를 띄어서 공백시 알림창 올리기
+	  }
+}); 
+	</script>
+</html>
